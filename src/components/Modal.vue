@@ -1,6 +1,6 @@
 <template lang="pug">
 div.backdrop(@click.self="closeModal")
-    .modal(:class="{ sale: theme === 'sale' }")
+    .modalScoped(:class="{ sale: theme === 'sale' }")
         slot default content
         div.actions
             slot(name="links")
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style scoped>
-    .modal{
+    .modalScoped{
         width: 400px;
         padding: 20px;
         margin: 100px auto;

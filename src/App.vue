@@ -5,13 +5,15 @@ div.container.center-align
   teleport(to=".modals" v-if="showModal")
     Modal(theme="" @close="toggleModal")
       template(v-slot:links)
-        a(href="#") Sign Up
-        a(href="#") More Info
-      h1 Lorem Ipsum 
+        button.small
+          a(href="#") Sign Up
+        button.small 
+          a(href="#") More Info
+      h5 Lorem Ipsum 
       p More lorem ipsum
   teleport(to=".modals" v-if="showModalTwo")
     Modal(@close="toggleModalTwo")
-      h1 newsletter 
+      h5 newsletter 
       p get updates
     
   button.small(@click="toggleModal") open modal (alt)
